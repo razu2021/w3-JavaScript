@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Map </title>
+
+</head>
+<body>
+
+<h1> JavaScript Map uses </h1>
+
+<h1 id="demo"></h1>
+
+<script>
+var demo = document.getElementById('demo');
+/*
+    map method basicly array te apply kora hoy ,,ekti arryr protita element a alada alada kaj korte pari .. 
+    mone koro tomar akta aray ace . tomi cacco tomar array jeta ace seta thik thakbe but tar moto onno akta array create kore sekhae kico functional kaj korba . 
+    tahole tomi onno vabe seta korte e parba .. 
+    tomi jodi map mathod use kore koro thaole seta aro valo hobe ,, and easy hobe ,,,
+
+     ------------- examole work amara nicher dike dekhbo but  aga basic ta sikhte hobe ----------------------
+*/
+
+// -----------  crate a empay map 
+const number = new Map();
+
+console.log(number);
+
+/*============    
+        upore amara akta empty map crate koreci  akhon bahir theke map er moddhe data add korbo 
+        map a data add korar junno set use korte hobe 
+==============*/
+
+ number.set(10);
+ number.set(20);
+ number.set(30);
+ number.set(40);
+ number.set(50);
+ number.set(60);
+console.log(number);
+
+
+
+
+/*============    
+        tomi jei map ta niye kaj korteco .. setar modde koto gula data or value ace seta tomake jante hobe 
+        tomi jodi eti jante cao tahole size mehtod uese kore easyly jante parbe 
+        how to use size method in map 
+==============*/
+ 
+var mapsize = number.size;
+console.log(mapsize);
+
+
+
+/*============    
+        has .. has holo kono ekta specific value tomar map er moddhe exist kore ki na .. jodi tomar map er viotre value exist kore thaole 
+        return true asbe otherwise false asbe 
+
+==============*/
+
+    let hasnumber = number.has(20);
+    console.log(hasnumber);
+
+
+
+
+/*============    
+        delete .. eelete holo kono ekta specific value tomar map er moddhe exist kore ki na .. jodi tomar map er viotre value exist kore thaole 
+        tomi setake delete kore felte paro .. 
+        number jodi delete hoy tahole true dekhabe 
+==============*/
+
+let deletenumber = number.delete(20);
+    console.log(deletenumber);
+    console.log(number); // age number cilo 6 ta akon 5 ta dekhabe 
+
+
+
+
+
+
+/*============     example 1
+       akhane amara kico number nibo abong map er use dekhbo 
+       akhane arry kono change aseni but amara arry er akta new instance crate kore sekhane funcional kaj korlam 
+==============*/
+ var numbers = [10,20,30,40,50,60,];
+
+ let mapmumbers = numbers.map(function(num){
+    return num * 2 ;
+ });
+
+ console.log(mapmumbers);
+
+
+
+ /*============    example 2  
+       ekhane ekti array ace   jekhane kico name lekha ace lowecase .
+       but amara map use kore sobgulo name k upppercase convert korbo ..
+==============*/
+
+let name = ['jesmin','razu','sultana ','jui','jsmin','razu']
+
+ let nameuppercase = name.map(function(names){
+      return  names.toUpperCase();
+ })
+ console.log(nameuppercase);
+
+
+
+ /*============    example 3 
+       how to work with object to map 
+==============*/
+let object = [
+    {name:'md razu hossain raj ', book:500},
+    {name:'jesmin ', book:200},
+    {name:'jui ', book:100},
+];
+
+
+let objectsmap = object.map(function(items){
+    return {
+        authorName: items.name,
+        authorBook: items.book
+    };
+})  
+console.log(objectsmap[0].authorName); // "Author1"
+console.log(objectsmap[0].authorBook); // "Book1"
+
+console.log(objectsmap[1].authorName); // "Author1"
+console.log(objectsmap[1].authorBook); // "Book1"
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
