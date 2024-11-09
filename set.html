@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript set mehtod </title>
+</head>
+<body>
+    <h1 id="set1"></h1>
+    <h1 id="set1"></h1>
+    <h1 id="set2"></h1>
+    <h1 id="set3"></h1>
+    <h1 id="set4"></h1>
+    <h1 id="set5"></h1>
+    <h1 id="set6"></h1>
+    <h1 id="set7"></h1>
+
+
+<script>
+
+var set1= document.getElementById('set1');
+var set2= document.getElementById('set2');
+var set3= document.getElementById('set3');
+var set4= document.getElementById('set4');
+var set5= document.getElementById('set5');
+var set6= document.getElementById('set6');
+var set7= document.getElementById('set7');
+
+
+/*
+ A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects.
+ set amar use korbo sudhu matro uniqe value gulo collaction korar junno .
+  jodi amader ekti array te onek gulo duplicate value  thakte pare but amar set er maddome just unique value gula  pabo 
+*/
+
+
+
+
+
+/* 
+how to Crate a set  
+    amra caile ekti empty set create korte pari .. abar caile value add korte pari add method er moddome 
+*/
+let mySet = new Set();
+
+    console.log(mySet);
+      
+/*
+    how to add set data 
+    tomi jodi set a new kono data add korte cao tahole tomake add method use kore korte hobe 
+*/
+mySet.add("1");
+mySet.add("2");
+mySet.add("3");
+mySet.add("4");
+mySet.add("5");
+mySet.add("6");
+console.log(mySet);
+     
+
+
+/*
+    ekti set koto gula value ace ta jodi tomi dekhte cao tahole 
+    size mthods use kore dekhte parba 
+    jemon amara string length check korar junno length use kori 
+*/
+console.log(mySet.size);
+
+
+
+
+/*
+    has mathod diye amra caile value check kore dekhte pari je 
+    amar je value ta find korte cacci seta ace ki na .. j\
+    jodi thake tahole true dekhabe 
+    r jodi na thake tahole false dekhabe 
+*/
+
+var sethas = mySet.has("4");
+console.log(sethas);
+
+
+
+/*  DELETE VALUE IN SET MOTHODS 
+    tomi jodi cao jekhon akta value delet korte tahole 
+    tomi delete method use kore ta korte parba .
+*/
+var delets = mySet.delete("3");
+console.log(delets);
+   
+    var text = "";
+    for(let x of mySet){
+        text += x+ ",";
+    }
+    console.log(text) 
+
+
+
+
+/*
+     use cas :
+     set mmethod amra kokhn use korbo 
+    print korbo kivabe 
+    whtas the banifit 
+
+    akti array theke jokhn tomi sudhumatro unique value gula get korba tokhn set use korba , abar ata diye itarable kora o onek easy  lets practice 
+*/
+
+    let myarray = ['1','1','2','2','3','3','4','4','5','5','6','7','8','9','10','11','11'];
+    console.log(myarray);
+    //akhon tomi dekhte pacco array te onek duplicate value ace but tomake unique value gula get korte hobe how to do this 
+    let setArray = new Set(myarray);
+    console.log(setArray);
+
+    // tomi caile ata for of looper maddhome show korate parba .. abar caile array te convert koreo show korte parbe .. lets convert to array 
+    let isArray = [... new Set(setArray)];
+    var text = "";
+    for(const x of isArray){
+        text += x+ ",";
+    }
+   
+    console.log(text);
+
+// more example 
+var name = "md razu hossain raj ";
+let nameSet = [new Set(name)];
+
+for(x of name ){
+    console.log(x);
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Itareble </title>
+</head>
+<body>
+    
+
+
+<h1 id="demo"></h1>
+<h1 id="demo2"></h1>
+
+<script>
+
+    /*==========  how to itareble a string  ==============*/
+    var result = document.getElementById('demo');
+    var text = "";
+    var name = "Md Razu Hossain Raj ";
+
+    for(const x of name){
+        text += x + "<br>";
+        // text = text + x+ "<br>"
+    }
+    result.innerHTML= text ;
+
+</script>
+
+
+<script>
+/*========= how to itarale a array =========== */
+var show = document.getElementById('demo2');
+var text2 = "";
+var name2 = ['Razu','Jesmin','jui','Sultana','raj','hossain'];
+
+for(const x of name2){
+    text2 += x + "<br>";
+}
+show.innerHTML=show;
+
+</script>
+
+
+
+<script>
+    /*========= How to iterate through an array =========== */
+    var show = document.getElementById('demo2');
+    var text2 = "";
+    var name2 = ['Razu', 'Jesmin', 'Jui', 'Sultana', 'Raj', 'Hossain'];
+    
+    for (const x of name2) {
+        text2 += x + "<br>";
+    }
+    show.innerHTML = text2; // Set innerHTML to text2
+    </script>
+
+
+</body>
+</html>
