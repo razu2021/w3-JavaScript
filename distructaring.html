@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Destructuring</title>
+</head>
+<body>
+    
+
+<script>
+
+/*
+    distructaring .. dhow tomar kace akta array or akta object ace .. abong agulor vitore kico data ace but tomar sob gulo  data dorkar nai .. 
+    tomi specific data niye kaj korba ,, 
+    tokhn tomi distructating use kore seta easyly korte paro ,,,,,,,,,,,,,,
+*/
+
+//let {firstName, lastName} = person;
+
+
+/*============  Example one  array distructaring 
+    mone koro tomar akta array ace ..and kico person ace .. but tomar sob gulo person dorkar nai  ,
+    tomi cacco kico persion er name jane .. kivabe korba ?
+
+*/
+const person = ['razu','jesim','jui','sultana','raj','Hossain','rohan','Rahim','korim','jobbar'];
+
+const   [first,secound,threed,four ,  ...  others] = person;
+
+console.log(first);
+console.log(secound);
+console.log(threed);
+console.log(four);
+console.log(others);
+
+
+
+
+/*============  Example 2  object distructaring 
+    mone koro tomar akta array ace ..and kico person ace .. but tomar sob gulo person dorkar nai  ,
+    tomi cacco kico persion er name jane .. kivabe korba ?
+
+*/
+
+
+const myinfo = {
+    name : "md razu hossain raj ",
+    age:23 ,
+    height:5.4,
+    weight :70 ,
+    father:{
+        name:"abdur Rahid ",
+        age :45
+    },
+    mother:{
+        name:"Marium bagum",
+        age : 35
+    },
+    schoole:{
+        name: "Sarall para Dakhil madrsah",
+        dpt:"SC"
+    },
+    collage:{
+        name:"Dinajpur Polytechnic Institute",
+        dpt:"Architecture",
+    }
+
+}
+
+const {name: myname, age:myage ,  // access my information 
+    father:{name:myfathername} ,    // access my father information     
+     mother:{name:mymothername} ,   // acceess my mother information 
+     schoole:{name:myschool},   // access my schoole informatiaon 
+     collage:{name:mycollage ,dpt:mydpt}} = myinfo  // my collage information 
+
+    console.log(myname);
+    console.log(myage);
+    console.log(myfathername);
+    console.log(mymothername);
+    console.log(myschool);
+    console.log(mycollage);
+    console.log(mydpt);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Errors</title>
+</head>
+<body>
+    
+<div style="width: 80%;margin: 0 auto; background: #b4b4b4;padding: 50px;">
+    <h1>JavaScript Errors </h1>
+    <input type="number" id="userinput" />
+    <button type="button" id="button">submit</button><br>
+    <h2 style="color: red;" id="error" > input 5 to 10 only :</h2>
+    <h1 id="data"> </h1>
+</div>
+
+
+
+<script>
+
+/* apni joto valo e coder or programer hon na kno .. error or vul hobe e 
+    ==== why use errors handaling   ## user false inforamtion dile programe theme jete pare   ## server response na korle programe theme jete pare  ## coder kothao kono vul thekleo program theme ejaite pare 
+ mone koro tomar 100 line er akti program ace .. but 5 nmber line vull ace .. tahole 5 number line er pore tomar code r kaj korbe na ,, jodi kaj korate cai tahole tomake error hendle korte hobe 
+
+*/
+
+
+//=================================================================================================================
+
+// try{
+
+//     // your main code is here 
+
+//     /* 
+//     tomar main code er vitore thake je ta niye tomi kaj kortecao .. abnon ai coder vitore theke jodi kono error ase seta cole jabe catch er viotre ..
+//     akhane syntex error handle hoy na 
+
+
+//     */
+
+//     throw  // throw holo custome error handelink ..jodi kono akta error ase seta k amar throw korbo catch er votore abng catch theke handle korbo 
+
+
+// }catch(erroe){
+//     // error hangle section 
+//     /*
+//         try er vitore jodi kkono errror thake tahole setta akhna theke handle korte parbe 
+//     */
+
+
+// }finally{
+
+//     /*
+//         akhane amon kico code thake jeta sob somoy kaj korbe ,.. error asle korbe abar error na asle o korbe 
+//     */
+
+
+
+// }
+
+
+
+
+//========================------------------------  Example number 1 -----------------------------------===============================
+
+// logic test 
+
+
+// try{
+//     alert("welcome to try block");
+
+//     alert(x);
+
+//     alert("goodby of try block");
+// }catch(error){
+//     alert('inside catch block');
+// }
+
+
+//========================------------------------  Example number 2 -----------------------------------===============================
+
+let result = document.getElementById('data');
+let errors = document.getElementById('error');
+
+
+let button = document.getElementById('button');
+
+
+button.addEventListener("click",function(){
+    let uservalue = document.getElementById('userinput').value;
+
+    try{
+        if(uservalue < 5){ 
+            
+            throw "input is too low ! Please input a value 5 or up to 5";
+        }else if(uservalue > 10){
+            throw "input is too High !  Please input a value  10 or 10 low ";
+        }
+
+    }catch(error){
+        errors.innerHTML= error;
+    }finally{
+        result.innerHTML= uservalue;
+    } 
+
+   
+})
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
