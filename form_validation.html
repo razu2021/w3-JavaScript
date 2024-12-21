@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation </title>
+
+<style>
+    .forms{
+        width: 700px;
+        margin: 0 auto;
+        padding: 30px; 
+        background: #f1f1f1;
+        border: 3px solid #000;
+
+
+    }
+</style>
+</head>
+<body>
+
+
+<div class="forms">
+    <form action="" name="myform" onsubmit=" return formValidation()" method="get">
+        <input type="text" name="fname" id=""><br><br>
+        
+        <input type="text" name="email" id=""><br><br>
+        <input type="text" name="phone" id=""><br><br>
+        <input type="text" name="number" id=""><br><br>
+        <button type="submit">submit</button>
+        </form>
+        <p id="error" style="color: red;"></p>
+        <h3 id="submit" style="color: green ; text-transform: uppercase;"></h3>
+</div>
+
+<script>
+  function formValidation() {
+        const error = document.getElementById('error');
+        const success  = document.getElementById('submit');
+        const name = document.forms['myform']['fname'].value.trim();
+        const email = document.forms['myform']['email'].value.trim();
+        const phone = document.forms['myform']['phone'].value.trim();
+        const number = document.forms['myform']['number'].value.trim();
+        error.innerHTML="";
+        success.innerHTML="";
+        if (name === "") {
+            error.innerHTML = "Name is required!";
+            return false; // Prevent form submission
+        }
+
+        if (email === "") {
+            error.innerHTML = "Email is required!";
+            return false; // Prevent form submission
+        }
+
+        if (phone === "") {
+            error.innerHTML = "Phone is required!";
+            return false; // Prevent form submission
+        }
+        if (number === "" || isNaN(number) || number < 1 || number > 10) {
+            error.innerHTML = "input a valid number!";
+            return false; // Prevent form submission
+        }
+
+            // All fields are valid
+            success.innerHTML = "Form submitted successfully!";
+            return false; // Allow form submission
+        
+    }
+
+</script>
+
+</body>
+</html>
