@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove html Element </title>
+</head>
+<body>
+    <h1> how remove html element use of JavaScript</h1>
+<hr>
+    <!-- direct remove the elements  -->
+    <h3 id="remove">remove this one </h3>
+    <p>element is here </p>
+<hr>
+    <div id="parent">
+        <h1 id="chaild">Remove the Element form the Parent element </h1>
+        <h1>remove is here </h1>
+    </div>
+
+
+
+
+<script>
+    //* direct remove the element form body ===========*///
+    let remove_ele = document.getElementById("remove");
+        remove_ele.remove();
+
+
+
+
+
+
+        /* ====  how to remove the element form parent element or specific div */
+        let parents = document.getElementById("parent");
+        let child = document.getElementById("chaild");
+        parents.removeChild(child);
+
+
+</script>
+
+
+
+
+</body>
+</html>

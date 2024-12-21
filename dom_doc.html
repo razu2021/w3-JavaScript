@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript HTML DOM Document</title>
+</head>
+<body>
+    
+<h1>JavaScript HTML DOM Document </h1>
+<hr>
+<h1 id="ID1"></h1>
+<h1 class="name"></h1>
+<h1></h1>
+<h2 name="nams"></h2>
+
+<p class="p1"></p>
+<p id="p2"></p>
+
+<!-- ========================================== -->
+<a id="attr" href="https://www.google.com">google com </a>
+
+<img id="imagess" alt="">
+
+<h3 id="my_name"></h3>
+
+<!-- remove  html elements  -->
+ <button id="remove_button"> remove button </button>
+    <div id="my_div">
+
+    </div>
+
+<script>
+/*
+    the HTML DOM document object is the owner of all other objects in your web page.
+    The document object represents your web page.
+    If you want to access any element in an HTML page, you always start with accessing the document object.
+
+
+*/
+
+/*-----------Finding HTML Elements------------
+    document.getElementById(id name)    ... select with id name 
+    document.getElementsByClassName(name)  ... selcet with class name 
+    document.getElementsByTagName(name)  ... select with Tag name 
+    document.getElementsByName ... select with attributes name 
+    document.QuerySelector() .... select with id class tag and attributes 
+    document.querySelectoreAll () ....     
+*/
+
+
+
+// ======== select with id 
+/*--- tomi jodi specific kono akta kaj korte cao tahole tomake obossoy id diye korte hobe */
+let id1 = document.getElementById("ID1"); // select element with id 
+id1.innerHTML="Select with id ";
+
+
+// ======== select with Class Name 
+//*-------   jodi tomi class diye select korte cao thaole class akta array return kore ,. so tomake index number diyye call korte hobe */
+ let class1 = document.getElementsByClassName("name")[0];
+ class1.innerHTML = "hlw";
+
+
+
+// ======== select with tag Name 
+/* ---------- tomi caile tag niye select korte paro . but akoe e tag jodi onek gula thake ba thaktepare tahole tomake index number diye difine kore nite hobe */
+ let tagename1 = document.getElementsByTagName("h1")[3];
+ tagename1.innerHTML = "Select with Tag Name ";
+
+
+
+// ======== select with tag Name 
+/*======    tomi caile name attributes diye select korte paro .. index number diye korte hobe */
+ let nameatt = document.getElementsByName("nams")[0];
+ nameatt.innerHTML = "Select with attributes name  ";
+
+// ======== select with QuerySelector  with class name 
+/*tomi jodi query selector diye seletct koro tahole tomi caile akhane index number diye select korte parbe na tahole tomake querySelectoAll diye select korte hobe */
+ let p1 = document.querySelector(".p1");
+ p1.innerHTML = "Select with Query Selector   ";
+
+
+// ======== select with QuerySelector  with class name 
+ let p2 = document.querySelector("#p2");
+ p2.innerHTML = "Select with Query Selector  wit id  ";
+
+</script>
+
+<!-- ========================================================================================================== -->
+
+<script>
+    /*
+        Changing HTML Elements
+        ## tomi jodi html elements change koretre cao tahole tomake inner.HTML=" " change korte hobe 
+        ## how to change attributes value 
+        ##
+     */
+
+    let changeatt = document.getElementById("attr");
+    changeatt.href ="https://www.facebook.com";
+// set attrubute and value 
+    let imagesattset = document.getElementById("imagess");
+    imagesattset.setAttribute("src","myimage.jpg");
+    imagesattset.setAttribute("alt","my image ");
+
+// set attributes and value 
+    let my_att = document.getElementById("my_name");
+    my_att.innerHTML="Md Razu Hossain Raj ";
+    my_att.setAttribute("style","color:white;background:red;padding:10px");
+
+
+// Create a new elements 
+    let new_ele = document.createElement("h4");
+    new_ele.textContent="this is a h4 elements ";
+    document.body.appendChild(new_ele)
+
+// Create a button elements 
+    let button_ele = document.createElement("button");
+    document.body.appendChild(button_ele);
+    button_ele.textContent="my buttton";
+    button_ele.setAttribute("class","my_button");
+    button_ele.setAttribute("id","my_button");
+    button_ele.setAttribute("style","color:white;text-transform:uppercase")
+    button_ele.style.backgroundColor="red";
+    button_ele.style.border="none";
+    button_ele.style.padding="10px";
+
+
+/*--- create element in the specific div or section  */
+    let mydiv = document.getElementById("my_div");
+        mydiv.setAttribute("style","border:2px solid Red;width:500px;text-align:center;overflow:hidden")
+    let my_images = document.createElement("img");
+        my_images.setAttribute("src","https://i.ibb.co.com/wh0vRYr/92-D12-F8-E-9-D64-4-B11-896-E-0162-A74-CFF48.jpg")
+        my_images.setAttribute("style","height:auto;width:100%;margin:0px")
+
+        // card content create 
+    let my_name = document.createElement("h1");
+        my_name.textContent="Md Razu Hossain Raj ";
+        
+    let my_about = document.createElement("p");
+        my_about.textContent="hi, My name is Md Razu Hossain Raj , Iam full-Stack Webdeveloper ";
+
+    let card_button = document.createElement("button");
+        card_button.textContent="Read more";
+        card_button.setAttribute("style","margin:10px;background:red;border:none;padding:5px;color:white");
+
+
+
+
+    mydiv.appendChild(my_images);    
+    mydiv.appendChild(my_name);    
+    mydiv.appendChild(my_about);    
+    mydiv.appendChild(card_button);    
+   
+    // document.body.appendChild(mydiv);
+
+
+
+
+
+
+
+
+
+
+// Remove button in html element   or remove element 
+let remove_btn = document.getElementById("remove_button");
+    
+    
+
+</script>
+
+
+<h1> </h1>
+
+
+
+
+
+
+</body>
+</html>
